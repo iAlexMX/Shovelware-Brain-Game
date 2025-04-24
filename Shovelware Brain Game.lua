@@ -4,7 +4,7 @@ local answers
 if isfile("sbg.json") then
     answers = http:JSONDecode(readfile("sbg.json"))
 else
-    answers = http:JSONDecode(game:HttpGet("https://raw.githubusercontent.com/SleepyLuc/sbg/main/answers"))
+    answers = http:JSONDecode(game:HttpGet("https://raw.githubusercontent.com/iAlexMX/Shovelware-Brain-Game/refs/heads/main/answers"))
     writefile("sbg.json", http:JSONEncode(answers))
 end
 local question
