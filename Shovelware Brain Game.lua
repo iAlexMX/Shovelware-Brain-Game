@@ -22,7 +22,7 @@ getgenv().config = {
 }
 
 local lib = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/UI-Libs/main/discord%20lib.txt"))()
-local win = lib:Window("Shovelware's Brain Game (SYNX version)")
+local win = lib:Window("Shovelware's Brain Game")
 local serv = win:Server("SleepyLuc's scripts", "")
 local main = serv:Channel("📃main")
 main:Toggle("Auto-Join", false, function(b) 
@@ -47,7 +47,7 @@ main:Seperator()
 main:Toggle("Anti-AFK", false, function(b) 
     config.category = b
 end)
-main:Bind("Toggle UI", Enum.KeyCode.LeftAlt, function()
+main:Bind("Toggle UI", Enum.KeyCode.Q, function()
     config.ui = not config.ui
     game.CoreGui:WaitForChild("Discord").MainFrame.Visible = config.ui
 end)
@@ -56,6 +56,7 @@ credits:Label("SleepyLuc - made the script")
 credits:Label("RemoteScript - helped with the API")
 credits:Label("brickmane - made the KRNL port")
 credits:Label("AGuyOnDisc#4349 - helped with boardy questions")
+credits:Label("iAlexMX - helped updating the answers")
 credits:Button("Copy Discord Server Link", function() 
     setclipboard("https://discord.gg/NtwZkqCTrK")
 end)
